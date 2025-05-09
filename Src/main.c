@@ -60,6 +60,8 @@ int target_slot;
 int target_freq;
 int slot_number;
 
+int quiet_counter;
+
 /* Private function prototypes -----------------------------------------------*/
 static void SystemClock_Config(void);
 static void Error_Handler(void);
@@ -223,12 +225,20 @@ int main(void)
 			master_decoded = ft8_decode();
 			if (master_decoded > 0)
 			{
+				quiet_counter = 0;
 				display_messages(master_decoded);
 				if (Beacon_On == 1)
 					service_Beacon_mode(master_decoded);
 				else
 				if (Beacon_On == 0)
 					service_QSO_mode(master_decoded);
+			}
+			else {
+				if(quiet_counter < 2) quiet_counter++;
+
+				if((quiet_counter == 2) && (Beacon_On == 1)) {
+					service_Beacon_mode(1); //Initiate a CQ when the band is quiet
+				}
 			}
 
 			decode_flag = 0;

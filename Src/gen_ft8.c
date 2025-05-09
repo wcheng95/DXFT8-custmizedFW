@@ -344,15 +344,19 @@ void Read_Station_File(void)
 
 		static char LoadBand[6];
 
-		for(int BandIndex = 0; BandIndex < (Band_Minimum == _20M ? 5 : 7); BandIndex++) {
+		for(int BandIndex = 0; BandIndex < 7; BandIndex++) {
+			uint16_t i;
 			LoadBand[0] = 0;
 			extra_part = strtok(NULL, ":\r\n");
 			if (extra_part != NULL)
 			{
 	            strncpy(LoadBand, extra_part, sizeof(LoadBand) - 1);
 	            LoadBand[sizeof(LoadBand) - 1] = 0; // Null-terminate
-	            sBand_Data[BandIndex].Frequency = atoi(LoadBand);
-	            strcpy(sBand_Data[BandIndex].display, LoadBand);
+	            i = atoi(LoadBand);
+	            if(i>7000){
+	            	sBand_Data[BandIndex].Frequency = i;
+	            	strcpy(sBand_Data[BandIndex].display, LoadBand);
+	            }
 			}
 
 		}
