@@ -80,7 +80,7 @@ void set_cq(void)
 {
 	char message[28];
 	uint8_t packed[K_BYTES];
-	if(Send_Free == 1 && Free_Index > 0 && AutoToggle == 1){
+	if(Send_Free == 1 || (Free_Index > 0 && AutoToggle == 1)){
 		AutoToggle = 0;
 		if(Free_Index == 1) sprintf(message, "%s", Free_Text1);
 		else if(Free_Index == 2) sprintf(message, "%s", Free_Text2);
