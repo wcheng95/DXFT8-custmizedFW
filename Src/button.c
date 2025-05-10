@@ -46,6 +46,40 @@ extern int Auto_QSO_State;
 
 char display_frequency[] = "14.075";
 
+FreqStruct sBand_Data_default[] =
+	{
+		{// 40,
+		 7074, "7.074"},
+		{// 30,
+		 10136, "10.136"},
+		{// 20,
+		 14074, "14.075"},
+		{// 17,
+		 18100, "18.101"},
+		{// 15,
+		 21074, "21.075"},
+		{// 12,
+		 24915, "24.916"},
+		{// 10,
+		 28074, "28.075"}};
+
+FreqStruct sBand_Data_external[] =
+	{
+		{// 40,
+		 0, " "},
+		{// 30,
+		 0, " "},
+		{// 20,
+		 0, " "},
+		{// 17,
+		 0, " "},
+		{// 15,
+		 0, " "},
+		{// 12,
+		 0, " "},
+		{// 10,
+		 0, " "}};
+
 FreqStruct sBand_Data[] =
 	{
 		{// 40,
@@ -923,18 +957,29 @@ void executeCalibrationButton(uint16_t index)
 	switch (index)
 	{
 	case 10: // Lower Band
-		if (BandIndex > Band_Minimum)
+		if (BandIndex >= Band_Minimum)
 		{
-			BandIndex--;
+			if(sBand_Data[BandIndex].Frequency != sBand_Data_default[BandIndex].Frequency){
+				sBand_Data[BandIndex].Frequency = sBand_Data_default[BandIndex].Frequency;
+				sBand_Data[BandIndex].display = sBand_Data_default[BandIndex].display;
+			}
+			else if(BandIndex > Band_Minimum) BandIndex--;
+
 			show_wide(340, 55, sBand_Data[BandIndex].Frequency);
 			sprintf(display_frequency, "%s", sBand_Data[BandIndex].display);
 		}
 		break;
 
 	case 11: // Raise Band
-		if (BandIndex < _10M)
+		if (BandIndex <= _10M)
 		{
-			BandIndex++;
+			if(sBand_Data[BandIndex].Frequency != sBand_Data_external[BandIndex].Frequency &&
+					sBand_Data_external[BandIndex].Frequency != 0){
+				sBand_Data[BandIndex].Frequency = sBand_Data_external[BandIndex].Frequency;
+				sBand_Data[BandIndex].display = sBand_Data_external[BandIndex].display;
+			}
+			else if(BandIndex < _10M) BandIndex++;
+
 			show_wide(340, 55, sBand_Data[BandIndex].Frequency);
 			sprintf(display_frequency, "%s", sBand_Data[BandIndex].display);
 		}

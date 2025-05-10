@@ -84,6 +84,7 @@ extern uint16_t start_freq;
 extern int BandIndex;
 extern int Band_Minimum;
 extern FreqStruct sBand_Data[];
+extern FreqStruct sBand_Data_external[];
 extern int AGC_Gain;
 extern int ADC_DVC_Gain;
 extern int ADC_DVC_Off;

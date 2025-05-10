@@ -350,20 +350,20 @@ void Read_Station_File(void)
 			extra_part = strtok(NULL, ":\r\n");
 			if (extra_part != NULL)
 			{
-	            strncpy(LoadBand, extra_part, sizeof(LoadBand) - 1);
+				strncpy(LoadBand, extra_part, sizeof(LoadBand) - 1);
 	            LoadBand[sizeof(LoadBand) - 1] = 0; // Null-terminate
 	            i = atoi(LoadBand);
 	            if(i>7000){
-	            	sBand_Data[BandIndex].Frequency = i;
-	            	strcpy(sBand_Data[BandIndex].display, LoadBand);
+	            	sBand_Data_external[BandIndex].Frequency = i;
+	            	strcpy(sBand_Data_external[BandIndex].display, LoadBand);
 	            }
 			}
 
 		}
 
-
 		f_close(&fil);
 	}
+
 	//preload qsocalls
 	if (f_open(&fil, "QSOCalls.txt", FA_OPEN_ALWAYS | FA_READ) == FR_OK){
 		char read_buffer[256];
