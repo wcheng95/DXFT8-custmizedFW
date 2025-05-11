@@ -174,7 +174,7 @@ int main(void)
 						{
 							if (Xmit_DSP_counter % 4 == 0)
 							{
-								ft8_shift = ft8_hz * (double)tones[ft8_xmit_counter];
+								//ft8_shift = ft8_hz * (double)tones[ft8_xmit_counter];
 								set_FT8_Tone(tones[ft8_xmit_counter]);
 								ft8_xmit_counter++;
 							}
@@ -201,8 +201,9 @@ int main(void)
 				{
 					ft8_xmit_delay++;
 
-					if (ft8_xmit_delay == 16)
+					if (ft8_xmit_delay == 16){
 						output_enable(SI5351_CLK0, 1);
+					}
 				}
 			}
 

@@ -193,9 +193,7 @@ void compose_messages(void)
 void que_message(int index)
 {
 	uint8_t packed[K_BYTES];
-	asm("DMB"); //HAL_Delay(10);
 	pack77(xmit_messages[index], packed);
-	asm("DMB"); //HAL_Delay(10);
 	genft8(packed, tones);
 
 	BSP_LCD_SetFont(&Font16);
