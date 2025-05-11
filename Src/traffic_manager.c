@@ -130,6 +130,7 @@ void setup_to_transmit_on_next_DSP_Flag(void)
 {
 	ft8_xmit_counter = 0;
 	xmit_sequence();
+	HAL_Delay(10);   //asm("DMB");
 	ft8_transmit_sequence();
 	xmit_flag = 1;
 	Xmit_DSP_counter = 0;
