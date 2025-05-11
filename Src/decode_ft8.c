@@ -440,6 +440,7 @@ void process_selected_Station(int stations_decoded, int TouchIndex)
 			set_QSO_Xmit_Freq(target_freq);
 
 		compose_messages();
+		asm("DMB");
 		if((new_decoded[TouchIndex].RR73 == 1) && (0 == strcmp(new_decoded[TouchIndex].call_to, Station_Call))) {
 			new_decoded[TouchIndex].RR73 = 2;
 			que_message(2);
