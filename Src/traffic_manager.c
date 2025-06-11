@@ -45,7 +45,7 @@ void service_QSO_mode(int decoded_signals)
 		else que_message(0);
 		QSO_xmit = 1;
 		QSO_xmit_count++;
-		if (QSO_xmit_count == 3)
+		if (QSO_xmit_count == 5)
 		{
 			Auto_QSO_State = 0;
 			QSO_xmit_count = 0;
