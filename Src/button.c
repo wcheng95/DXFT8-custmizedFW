@@ -97,7 +97,7 @@ FreqStruct sBand_Data[] =
 		{// 10,
 		 28074, "28.075"}};
 
-#define numButtons 39
+#define numButtons 83
 
 ButtonStruct sButtonData[] = {
 	{// button 0  inhibit xmit either as beacon or answer CQ
@@ -546,7 +546,7 @@ ButtonStruct sButtonData[] = {
 		 /*Active*/ 0,
 		 /*Displayed*/ 1,
 		 /*state*/ 0,
-		 /*x*/ 240,
+		 /*x*/ 256,
 		 /*y*/ 130,
 		 /*w*/ 160,
 		 /*h*/ 30},
@@ -557,7 +557,7 @@ ButtonStruct sButtonData[] = {
 		 /*Active*/ 0,
 		 /*Displayed*/ 1,
 		 /*state*/ 0,
-		 /*x*/ 240,
+		 /*x*/ 256,
 		 /*y*/ 155,
 		 /*w*/ 160,
 		 /*h*/ 30},
@@ -569,7 +569,7 @@ ButtonStruct sButtonData[] = {
 		 /*Active*/ 0,
 		 /*Displayed*/ 1,
 		 /*state*/ 0,
-		 /*x*/ 240,
+		 /*x*/ 256,
 		 /*y*/ 180,
 		 /*w*/ 160,
 		 /*h*/ 30},
@@ -581,7 +581,7 @@ ButtonStruct sButtonData[] = {
 		 /*Active*/ 0,
 		 /*Displayed*/ 1,
 		 /*state*/ 0,
-		 /*x*/ 240,
+		 /*x*/ 256,
 		 /*y*/ 205,
 		 /*w*/ 160,
 		 /*h*/ 30},
@@ -598,6 +598,58 @@ ButtonStruct sButtonData[] = {
 		 /*w*/ 90,
 		 /*h*/ 30},
 
+		 //text0, text1, blank, Active, Displayed, state,   x,   y,   w,   h
+
+		/*39*/ {   "E",  "E",  "  ",  0,      1,         0,     240,  205,  16,  30},    //Enable Edit
+
+		/*40*/ {   "A",  "A",  " ",  0,      1,         0,     240,  80,  25,  30},
+		/*41*/ {   "B",  "B",  " ",  0,      1,         0,     265,  80,  25,  30},
+		/*42*/ {   "C",  "C",  " ",  0,      1,         0,     290,  80,  25,  30},
+		/*43*/ {   "D",  "D",  " ",  0,      1,         0,     315,  80,  25,  30},
+		/*44*/ {   "E",  "E",  " ",  0,      1,         0,     340,  80,  25,  30},
+		/*45*/ {   "F",  "F",  " ",  0,      1,         0,     365,  80,  25,  30},
+		/*46*/ {   "G",  "G",  " ",  0,      1,         0,     390,  80,  25,  30},
+		/*47*/ {   "H",  "H",  " ",  0,      1,         0,     415,  80,  25,  30},
+		/*48*/ {   "I",  "I",  " ",  0,      1,         0,     440,  80,  25,  30},
+
+		/*49*/ {   "J",  "J",  " ",  0,      1,         0,     240,  105,  25,  30},
+		/*50*/ {   "K",  "K",  " ",  0,      1,         0,     265,  105,  25,  30},
+		/*51*/ {   "L",  "L",  " ",  0,      1,         0,     290,  105,  25,  30},
+		/*52*/ {   "M",  "M",  " ",  0,      1,         0,     315,  105,  25,  30},
+		/*53*/ {   "N",  "N",  " ",  0,      1,         0,     340,  105,  25,  30},
+		/*54*/ {   "O",  "O",  " ",  0,      1,         0,     365,  105,  25,  30},
+		/*55*/ {   "P",  "P",  " ",  0,      1,         0,     390,  105,  25,  30},
+		/*56*/ {   "Q",  "Q",  " ",  0,      1,         0,     415,  105,  25,  30},
+		/*57*/ {   "R",  "R",  " ",  0,      1,         0,     440,  105,  25,  30},
+                  
+		/*58*/ {   "S",  "S",  " ",  0,      1,         0,     240,  130,  25,  30},
+		/*59*/ {   "T",  "T",  " ",  0,      1,         0,     265,  130,  25,  30},
+		/*60*/ {   "U",  "U",  " ",  0,      1,         0,     290,  130,  25,  30},
+		/*61*/ {   "V",  "V",  " ",  0,      1,         0,     315,  130,  25,  30},
+		/*62*/ {   "W",  "W",  " ",  0,      1,         0,     340,  130,  25,  30},
+		/*63*/ {   "X",  "X",  " ",  0,      1,         0,     365,  130,  25,  30},
+		/*64*/ {   "Y",  "Y",  " ",  0,      1,         0,     390,  130,  25,  30},
+		/*65*/ {   "Z",  "Z",  " ",  0,      1,         0,     415,  130,  25,  30},
+		/*66*/ {   "0",  "0",  " ",  0,      1,         0,     440,  130,  25,  30},
+
+		/*67*/ {   "1",  "1",  " ",  0,      1,         0,     240,  155,  25,  30},
+		/*68*/ {   "2",  "2",  " ",  0,      1,         0,     265,  155,  25,  30},
+		/*69*/ {   "3",  "3",  " ",  0,      1,         0,     290,  155,  25,  30},
+		/*70*/ {   "4",  "4",  " ",  0,      1,         0,     315,  155,  25,  30},
+		/*71*/ {   "5",  "5",  " ",  0,      1,         0,     340,  155,  25,  30},
+		/*72*/ {   "6",  "6",  " ",  0,      1,         0,     365,  155,  25,  30},
+		/*73*/ {   "7",  "7",  " ",  0,      1,         0,     390,  155,  25,  30},
+		/*74*/ {   "8",  "8",  " ",  0,      1,         0,     415,  155,  25,  30},
+		/*75*/ {   "9",  "9",  " ",  0,      1,         0,     440,  155,  25,  30},
+
+		/*76*/ {   "+",  "+",  " ",  0,      1,         0,     240,  180,  25,  30},
+		/*77*/ {   "-",  "-",  " ",  0,      1,         0,     265,  180,  25,  30},
+		/*78*/ {   ".",  ".",  " ",  0,      1,         0,     290,  180,  25,  30},
+		/*79*/ {   "/",  "/",  " ",  0,      1,         0,     315,  180,  25,  30},
+		/*80*/ {   "?",  "?",  " ",  0,      1,         0,     340,  180,  25,  30},
+		/*81*/ {   "SPC",  "SPC",  "   ",  0,      1,      0,     365,  180,  25,  30},
+		/*82*/ {   "<--",  "<--",  "  ",  0,        1,         0,     415,  180,  25,  30},
+	
 }; // end of button definition
 
 void drawButton(uint16_t button)
@@ -935,6 +987,61 @@ void executeButton(uint16_t index)
 			SkipGrid = 0;
 		break;
 
+	case 39: // Enable Edit
+		if (sButtonData[39].state == 1)
+			EnableKeyboard();
+		else
+			DisableKeyboard();
+		break;
+
+	case 40: AppendChar(Free_Text4, 'A'); UpdateFreeText4(); toggle_button_state(40); break;
+	case 41: AppendChar(Free_Text4, 'B'); UpdateFreeText4(); toggle_button_state(41); break;
+	case 42: AppendChar(Free_Text4, 'C'); UpdateFreeText4(); toggle_button_state(42); break;
+	case 43: AppendChar(Free_Text4, 'D'); UpdateFreeText4(); toggle_button_state(43); break;
+	case 44: AppendChar(Free_Text4, 'E'); UpdateFreeText4(); toggle_button_state(44); break;
+	case 45: AppendChar(Free_Text4, 'F'); UpdateFreeText4(); toggle_button_state(45); break;
+	case 46: AppendChar(Free_Text4, 'G'); UpdateFreeText4(); toggle_button_state(46); break;
+	case 47: AppendChar(Free_Text4, 'H'); UpdateFreeText4(); toggle_button_state(47); break;
+	case 48: AppendChar(Free_Text4, 'I'); UpdateFreeText4(); toggle_button_state(48); break;
+                                                                                       
+	case 49: AppendChar(Free_Text4, 'J'); UpdateFreeText4(); toggle_button_state(49); break;
+	case 50: AppendChar(Free_Text4, 'K'); UpdateFreeText4(); toggle_button_state(50); break;
+	case 51: AppendChar(Free_Text4, 'L'); UpdateFreeText4(); toggle_button_state(51); break;
+	case 52: AppendChar(Free_Text4, 'M'); UpdateFreeText4(); toggle_button_state(52); break;
+	case 53: AppendChar(Free_Text4, 'N'); UpdateFreeText4(); toggle_button_state(53); break;
+	case 54: AppendChar(Free_Text4, 'O'); UpdateFreeText4(); toggle_button_state(54); break;
+	case 55: AppendChar(Free_Text4, 'P'); UpdateFreeText4(); toggle_button_state(55); break;
+	case 56: AppendChar(Free_Text4, 'Q'); UpdateFreeText4(); toggle_button_state(56); break;
+	case 57: AppendChar(Free_Text4, 'R'); UpdateFreeText4(); toggle_button_state(57); break;
+                                                                                       
+	case 58: AppendChar(Free_Text4, 'S'); UpdateFreeText4(); toggle_button_state(58); break;
+	case 59: AppendChar(Free_Text4, 'T'); UpdateFreeText4(); toggle_button_state(59); break;
+	case 60: AppendChar(Free_Text4, 'U'); UpdateFreeText4(); toggle_button_state(60); break;
+	case 61: AppendChar(Free_Text4, 'V'); UpdateFreeText4(); toggle_button_state(61); break;
+	case 62: AppendChar(Free_Text4, 'W'); UpdateFreeText4(); toggle_button_state(62); break;
+	case 63: AppendChar(Free_Text4, 'X'); UpdateFreeText4(); toggle_button_state(63); break;
+	case 64: AppendChar(Free_Text4, 'Y'); UpdateFreeText4(); toggle_button_state(64); break;
+	case 65: AppendChar(Free_Text4, 'Z'); UpdateFreeText4(); toggle_button_state(65); break;
+	case 66: AppendChar(Free_Text4, '0'); UpdateFreeText4(); toggle_button_state(66); break;
+	                                                                               
+	case 67: AppendChar(Free_Text4, '1'); UpdateFreeText4(); toggle_button_state(67); break;
+	case 68: AppendChar(Free_Text4, '2'); UpdateFreeText4(); toggle_button_state(68); break;
+	case 69: AppendChar(Free_Text4, '3'); UpdateFreeText4(); toggle_button_state(69); break;
+	case 70: AppendChar(Free_Text4, '4'); UpdateFreeText4(); toggle_button_state(70); break;
+	case 71: AppendChar(Free_Text4, '5'); UpdateFreeText4(); toggle_button_state(71); break;
+	case 72: AppendChar(Free_Text4, '6'); UpdateFreeText4(); toggle_button_state(72); break;
+	case 73: AppendChar(Free_Text4, '7'); UpdateFreeText4(); toggle_button_state(73); break;
+	case 74: AppendChar(Free_Text4, '8'); UpdateFreeText4(); toggle_button_state(74); break;
+	case 75: AppendChar(Free_Text4, '9'); UpdateFreeText4(); toggle_button_state(75); break;
+                                                                                       
+	case 76: AppendChar(Free_Text4, '+'); UpdateFreeText4(); toggle_button_state(76); break;
+	case 77: AppendChar(Free_Text4, '-'); UpdateFreeText4(); toggle_button_state(77); break;
+	case 78: AppendChar(Free_Text4, '.'); UpdateFreeText4(); toggle_button_state(78); break;
+	case 79: AppendChar(Free_Text4, '/'); UpdateFreeText4(); toggle_button_state(79); break;
+	case 80: AppendChar(Free_Text4, '?'); UpdateFreeText4(); toggle_button_state(80); break;
+	case 81: AppendChar(Free_Text4, ' '); UpdateFreeText4(); toggle_button_state(81); break;
+	case 82: DeleteLastChar(Free_Text4);  UpdateFreeText4(); toggle_button_state(82); break;
+
 	}
 }
 
@@ -1059,7 +1166,7 @@ void setup_Cal_Display(void)
 		drawButton(button);
 	drawButton(27);
 
-	for (int button = 29; button <= numButtons - 1; ++button){
+	for (int button = 29; button <= 39; ++button){
 		sButtonData[button].Active = 1;
 		drawButton(button);
 	}
@@ -1239,4 +1346,68 @@ void FT8_Sync(void)
 	ft8_flag = 1;
 	FT_8_counter = 0;
 	ft8_marker = 1;
+}
+
+void EnableKeyboard(void)
+{
+	BSP_LCD_SetTextColor(LCD_COLOR_BLACK);
+	BSP_LCD_FillRect(240, 70, 239, 150);
+
+	//disable buttons
+	sButtonData[12].Active = 0;
+	sButtonData[13].Active = 0;
+	sButtonData[38].Active = 0;
+	for(int i=29; i<37; i++) sButtonData[i].Active = 0;
+
+	//Enable Keyboard
+	for(int i=40; i<83; i++) {
+		sButtonData[i].Active = 2;
+		drawButton(i);
+	}
+}
+
+void DisableKeyboard(void)
+{
+	BSP_LCD_SetTextColor(LCD_COLOR_BLACK);
+	BSP_LCD_FillRect(240, 70, 239, 150);
+
+	//disable keyboard
+	for(int i=40; i<83; i++) {
+		sButtonData[i].Active = 0;
+
+	}
+
+	//Enable buttons
+	sButtonData[12].Active = 1;
+	sButtonData[13].Active = 1;
+	sButtonData[38].Active = 1;
+	drawButton(12);
+	drawButton(13);
+	drawButton(38);
+
+	for(int i=29; i<37; i++) {
+		sButtonData[i].Active = 1;
+		drawButton(i);
+	}
+}
+
+void AppendChar(char *str, char c){
+	int len = strlen(str);
+	if(len < 19) {
+		str[len] = c;
+		str[len+1] = '\0';
+	}
+}
+
+void DeleteLastChar(char *str){
+	int len = strlen(str);
+	if(len > 0) str[len-1] = '\0';
+}
+
+void UpdateFreeText4(void) {
+	BSP_LCD_SetTextColor(LCD_COLOR_BLACK);
+	BSP_LCD_FillRect(256, 220, 223, 30);
+	sButtonData[37].text0 = Free_Text4;
+	sButtonData[37].text1 = Free_Text4;
+	drawButton(37);
 }

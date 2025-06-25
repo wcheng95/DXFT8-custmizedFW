@@ -55,7 +55,7 @@ int reply_message_count;
 static char Free_Text1[20];
 static char Free_Text2[20];
 static char Free_Text3[20];
-static char Free_Text4[20];
+char Free_Text4[20];
 
 
 const int display_start_x = 264;

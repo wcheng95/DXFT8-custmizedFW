@@ -110,6 +110,12 @@ void Init_BoardVersionInput(void);
 void DeInit_BoardVersionInput(void);
 void set_codec_input_gain(void);
 
+void EnableKeyboard(void);
+void DisableKeyboard(void);
+void AppendChar(char *str, char c);
+void DeleteLastChar(char *str);
+void UpdateFreeText4(void);
+
 extern ButtonStruct sButtonData[];
 
 void setup_Cal_Display(void);

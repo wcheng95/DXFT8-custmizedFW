@@ -27,6 +27,7 @@ extern char SDPath[4]; /* SD card logical drive path */
 extern int CQ_Mode_Index;
 extern int Free_Index;
 extern int Send_Free;
+extern char Free_Text4[20];
 
 void clear_reply_message_box(void);
 void set_reply(uint16_t index);
